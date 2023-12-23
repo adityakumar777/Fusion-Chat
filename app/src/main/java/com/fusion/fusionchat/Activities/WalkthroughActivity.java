@@ -80,7 +80,7 @@ public class WalkthroughActivity extends AppCompatActivity {
         binding.sliderViewpager.addOnPageChangeListener(viewListener);
     }
     private void nevigateToSignUpActivity() {
-        Intent intent = new Intent(this, SignUpActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         finish();

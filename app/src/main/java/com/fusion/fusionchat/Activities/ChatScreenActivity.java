@@ -398,7 +398,7 @@ public class ChatScreenActivity extends AppCompatActivity {
         if (requestCode == 2 && resultCode == RESULT_OK) {
             Uri result = data.getData();
             StorageReference reference = storage.getReference().child("chats")
-                    .child(System.currentTimeMillis() + "");
+                    .child(String.valueOf(System.currentTimeMillis()));
             reference.putFile(result).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
@@ -459,10 +459,10 @@ public class ChatScreenActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id==R.id.block){
-            Toast.makeText(this, "User is getting blick....", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "User is getting block....", Toast.LENGTH_SHORT).show();
         }
         else {
-            showProfilePictureDialog(profilePicResId,username);
+            Toast.makeText(this, "Report is successful!", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);

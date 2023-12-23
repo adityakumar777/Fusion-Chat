@@ -14,7 +14,7 @@
     import androidx.appcompat.app.AppCompatActivity;
     import com.daimajia.androidanimations.library.Techniques;
     import com.daimajia.androidanimations.library.YoYo;
-    import com.fusion.fusionchat.databinding.ActivitySignUpBinding;
+    import com.fusion.fusionchat.databinding.ActivityLoginBinding;
     import com.google.firebase.FirebaseException;
     import com.google.firebase.auth.FirebaseAuth;
     import com.google.firebase.auth.PhoneAuthCredential;
@@ -23,19 +23,19 @@
     import com.shashank.sony.fancytoastlib.FancyToast;
     import java.util.concurrent.TimeUnit;
 
-    public class SignUpActivity extends AppCompatActivity {
+    public class LoginActivity extends AppCompatActivity {
 
         private static final int PERMISSION_REQUEST_CODE = 123;
         private String permissions[] = {
                                         "android.permission.READ_EXTERNAL_STORAGE",
                                          "android.permission.WRITE_EXTERNAL_STORAGE"   };
-        private ActivitySignUpBinding binding;
+        private ActivityLoginBinding binding;
         private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            binding = ActivitySignUpBinding.inflate(getLayoutInflater());
+            binding = ActivityLoginBinding.inflate(getLayoutInflater());
             setContentView(binding.getRoot());
 
             requestPermissions(permissions, PERMISSION_REQUEST_CODE);
@@ -113,7 +113,7 @@
                 public void onCodeSent(@NonNull String verificationId,
                                        @NonNull PhoneAuthProvider.ForceResendingToken token) {
                     FancyToast.makeText(getApplicationContext(), "Code Sent!", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true).show();
-                    Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), OTPActivity.class);
                     intent.putExtra("number", binding.cpicker.getFullNumber());
                     intent.putExtra("formattedNumber", binding.cpicker.getFormattedFullNumber());
                     intent.putExtra("verificationId", verificationId);

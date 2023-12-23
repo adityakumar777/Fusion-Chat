@@ -15,7 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.fusion.fusionchat.R;
-import com.fusion.fusionchat.databinding.ActivitySignInBinding;
+import com.fusion.fusionchat.databinding.ActivityOtpBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -29,9 +29,9 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 
 import java.util.concurrent.TimeUnit;
 
-public class SignInActivity extends AppCompatActivity {
+public class OTPActivity extends AppCompatActivity {
 
-    private ActivitySignInBinding binding;
+    private ActivityOtpBinding binding;
     private String number;
     private String otpOfFirebase;
 
@@ -42,7 +42,7 @@ public class SignInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivitySignInBinding.inflate(getLayoutInflater());
+        binding = ActivityOtpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         mAuth = FirebaseAuth.getInstance();

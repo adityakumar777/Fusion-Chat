@@ -5,25 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".Activities.SignInActivity">
+    tools:context=".Activities.OTPActivity">
 
 
-    <View
-        android:id="@+id/linearLayout6"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="@color/black"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:background="#4A505050"
+        android:elevation="2dp"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/white_ripple"
+            android:src="@drawable/back_arrow"
+            app:tint="@color/black"
+             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wrong Number"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            />
+
+    </LinearLayout>
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/linear"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/otpverify" />
@@ -48,8 +75,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:paddingVertical="10dp"
         android:paddingHorizontal="50dp"
+        android:paddingVertical="10dp"
         android:text="We have sent an OTP to your given number "
         android:textColor="@color/light_black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +89,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingHorizontal="50dp"
-        android:text="+919520541388"
+        android:text="+91 9520541388"
         android:textColor="@color/light_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,8 +105,8 @@
         android:background="@drawable/black_ripple"
         android:clickable="true"
         android:text="Resend code"
-        android:textSize="9dp"
         android:textColor="@color/white"
+        android:textSize="9dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -90,9 +117,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
-        android:background="@color/white"
         android:paddingHorizontal="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -161,11 +188,12 @@
             android:gravity="center"
             android:imeOptions="actionNext"
             android:inputType="number"
-            android:textSize="18sp"
             android:maxLength="1"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
     </LinearLayout>
+
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/signIn_loading"
@@ -174,16 +202,12 @@
         android:elevation="5dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/verify_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/verify_btn"
+        app:layout_constraintStart_toStartOf="@+id/verify_btn"
         app:layout_constraintTop_toTopOf="@+id/verify_btn"
-        app:layout_constraintVertical_bias="1.0"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/loading_anim" />
-
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/verify_btn"

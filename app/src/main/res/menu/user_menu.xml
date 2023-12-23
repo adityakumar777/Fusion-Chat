@@ -8,7 +8,7 @@
         android:title="Block"
         />
     <item android:id="@+id/profile_of_user"
-        android:title="Profile"
+        android:title="Report"
         />
 
 </menu>

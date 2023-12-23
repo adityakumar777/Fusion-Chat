@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/cool_white_bg"
     tools:context=".Activities.SettingsActivity">
 
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@color/light_black"
+        android:background="@color/black"
         android:elevation="2dp"
         android:gravity="center"
         android:layout_marginHorizontal="10dp"
@@ -80,7 +80,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="20dp"
             android:layout_marginHorizontal="20dp"
-            android:background="@drawable/corners"
+            android:background="@drawable/style_edittext"
             android:hint="Your Name"
             android:inputType="text"
             android:textColor="@color/light_black"
@@ -103,7 +103,8 @@
             android:id="@+id/about"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-           android:layout_marginHorizontal="20dp"  android:background="@drawable/corners"
+            android:background="@drawable/style_edittext"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="20dp"
             android:gravity="top"
@@ -114,14 +115,14 @@
             android:minWidth="30dp"
             android:minHeight="30dp"
             android:padding="10dp"
-            android:scrollHorizontally="true"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            />
     </LinearLayout>
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/submit_btn"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/black_ripple"

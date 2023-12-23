@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
@@ -41,10 +41,15 @@
             android:exported="false" />
         <activity
             android:name=".Activities.TestActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Activities.SplashActivity"
             android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
@@ -65,18 +70,16 @@
         <activity
             android:name=".Activities.UserDataActivity"
             android:exported="true"
-            android:theme="@style/MyStyle"></activity>
+            android:theme="@style/MyStyle">
+
+        </activity>
         <activity
-            android:name=".Activities.SignInActivity"
+            android:name=".Activities.OTPActivity"
             android:exported="true" />
         <activity
-            android:name=".Activities.SignUpActivity"
+            android:name=".Activities.LoginActivity"
             android:exported="true">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity

@@ -43,7 +43,7 @@ public class UserDataActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         storage = FirebaseStorage.getInstance();
 
-        startDynamicBG();
+       // startDynamicBG();
         setOldDetails(); //If user have already setup profile before
 
         String number = getIntent().getStringExtra("number");
@@ -88,7 +88,7 @@ public class UserDataActivity extends AppCompatActivity {
                                     public void onSuccess(Uri uri) {
                                         photoUrl = uri.toString();
                                         binding.goBtn.setVisibility(View.VISIBLE);
-                                        binding.loading.setVisibility(View.INVISIBLE);
+                                       binding.loading.setVisibility(View.INVISIBLE);
                                     }
                                 });
                             }
@@ -97,7 +97,7 @@ public class UserDataActivity extends AppCompatActivity {
                             FancyToast.makeText(getApplicationContext(), "Failed", FancyToast.LENGTH_LONG, FancyToast.ERROR, true);
                             // Handle failed image upload
                             binding.goBtn.setVisibility(View.VISIBLE);
-                            binding.loading.setVisibility(View.INVISIBLE);
+                           binding.loading.setVisibility(View.INVISIBLE);
                         });
 
             }
