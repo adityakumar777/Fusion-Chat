@@ -1,0 +1,33 @@
+<!-- res/layout/popup_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:gravity="center"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/popUpName"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="@color/light_black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+       />
+    <ImageView
+        android:id="@+id/popUpProfilePic"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/default_profile_pic"
+      />
+
+</LinearLayout>

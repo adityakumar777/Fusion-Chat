@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.fusion.fusionchat'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.fusion.fusionchat"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.camera:camera-core:1.2.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //firebase BOM
+    implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-messaging'
+    //lottie
+    implementation "com.airbnb.android:lottie:3.4.0"
+    //toast
+    implementation 'io.github.shashank02051997:FancyToast:2.0.2'
+    //country_code_picker
+    implementation 'com.hbb20:ccp:2.5.0'
+    //circular image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //shimmer layout
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    //Image loader
+    implementation 'com.squareup.picasso:picasso:2.8'
+    //animation
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+    implementation 'com.daimajia.easing:library:2.4@aar'
+    //reactions
+    implementation "com.github.pgreze:android-reactions:1.6"
+    //status
+    implementation 'com.github.3llomi:CircularStatusView:V1.0.3'
+    implementation 'com.github.OMARIHAMZA:StoryView:1.0.2-alpha'
+    //Image Picker
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+    //Notification API
+    implementation 'com.android.volley:volley:1.2.1'
+    //okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    ///retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+}

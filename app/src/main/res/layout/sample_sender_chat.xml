@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/delete"
+    android:background="?selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+           <ImageView
+            android:id="@+id/image"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:srcCompat="@drawable/icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/senderChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_sender"
+        android:fontFamily="@font/font2"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:maxWidth="270dp"
+        android:maxHeight="400dp"
+        android:minWidth="50dp"
+        android:minHeight="20dp"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:text="chasssssssssssssssssssssssssssssssst"
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="19dp" />
+
+    <TextView
+        android:id="@+id/senderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/senderChat"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="-2dp"
+        android:text="12:00pm"
+        android:textColor="#959595"
+        android:textIsSelectable="false"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:id="@+id/feeling"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginRight="-10dp"
+        android:layout_alignTop="@+id/senderChat"
+        android:layout_alignBottom="@+id/senderChat"
+        android:layout_toStartOf="@+id/senderChat"
+        android:src="@drawable/ic_fb_angry"
+        android:visibility="visible" />
+
+</RelativeLayout>

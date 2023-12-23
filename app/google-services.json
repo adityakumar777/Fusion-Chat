@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "695122159540",
+    "firebase_url": "https://fusion-chat-official-default-rtdb.firebaseio.com",
+    "project_id": "fusion-chat-official",
+    "storage_bucket": "fusion-chat-official.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695122159540:android:287c8dff2cf8721c3ab4e1",
+        "android_client_info": {
+          "package_name": "com.fusion.fusionchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695122159540-51fq4l2ct0c106c1dptp1hvivfs5nlfo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fusion.fusionchat",
+            "certificate_hash": "ea2713ad955f07d41843809bf2b3eea5719882a7"
+          }
+        },
+        {
+          "client_id": "695122159540-b3d4mc5kdda71f517fpjlvq133kg8pv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqaEo7Bo9Fg0d6rzcGa3vYtY0bYPlM4_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695122159540-b3d4mc5kdda71f517fpjlvq133kg8pv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

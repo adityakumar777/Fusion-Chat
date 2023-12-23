@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/delete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/usernameInChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="name"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profilePicInChat"
+        app:layout_constraintEnd_toStartOf="@+id/profilePicInChat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePicInChat"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/default_profile_pic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/cons"
+        app:layout_constraintEnd_toEndOf="@+id/cons" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_sender"
+        android:elevation="1dp"
+        android:maxWidth="310dp"
+        android:maxHeight="400dp"
+        android:minWidth="30dp"
+        android:minHeight="30dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/senderChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font2"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:maxWidth="270dp"
+            android:minWidth="50dp"
+            android:paddingHorizontal="10dp"
+            android:text="chat"
+            android:textColor="@color/white"
+            android:textIsSelectable="false"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/senderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:inputType="text|textMultiLine"
+        android:maxWidth="270dp"
+        android:minWidth="50dp"
+        android:text="12:00pm"
+        android:textColor="#959595"
+        android:textIsSelectable="false"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cons" />
+
+    <ImageView
+        android:id="@+id/feeling"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_fb_angry"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/cons"
+        app:layout_constraintEnd_toStartOf="@+id/cons"
+        app:layout_constraintTop_toTopOf="@+id/cons" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
