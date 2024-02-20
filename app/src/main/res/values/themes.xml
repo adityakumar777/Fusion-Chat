@@ -3,7 +3,6 @@
     <style name="Theme.FusionChat" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/teal_green</item>
-
         <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -26,6 +25,7 @@
     </style>
 
     <style name="MyStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimaryVariant">@color/black</item>
         <item name="fontFamily">@font/font2</item>
         <item name="android:textColorPrimary">@android:color/black</item>
     </style>

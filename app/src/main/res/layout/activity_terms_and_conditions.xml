@@ -16,7 +16,7 @@
         android:background="@color/white"
         android:elevation="2dp"
         android:gravity="center"
-    >
+        >
         <ImageView
             android:id="@+id/back_arrow"
             android:layout_width="35dp"
@@ -41,10 +41,11 @@
         android:paddingBottom="3dp"
         >
         <TextView
+            android:id="@+id/terms"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="17sp"
-             android:text="@string/terms_and_conditions"
+
             />
     </ScrollView>
 

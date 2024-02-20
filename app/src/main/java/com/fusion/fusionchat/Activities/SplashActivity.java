@@ -34,6 +34,7 @@ public class SplashActivity extends AppCompatActivity {
         },700);
     }
     public void nevigateToActivity() {
+
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if (currentUser != null) {

@@ -11,35 +11,9 @@
     <string name="screen3desc">Aco is a intelligent ChatBot that can answer your most of questions </string>
     <string name="startDesc">Create a long video or shorts and upload on youtube. Interact with your subscribers on youtube live.</string>
     <string name="terms_and_conditions">
-    <![CDATA[
-        <b>Fusion Chat App - Terms and Conditions</b>\n\n
-        Last Updated: [Date]\n\n
-        1. <b>Acceptance of Terms</b>\n\n
-        By using the "Fusion Chat" app, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use the app.\n\n
-        2. <b>Registration and User Accounts</b>\n\n
-        2.1. To use certain features of the app, you may be required to register and create a user account.\n\n
-        2.2. You are responsible for maintaining the confidentiality of your account information and are solely responsible for all activities that occur under your account.\n\n
-        3. <b>User Conduct</b>\n\n
-        3.1. You agree not to use the app for any unlawful or unauthorized purpose.\n\n
-        3.2. You may not post, transmit, or share any content that is offensive, defamatory, obscene, or violates the rights of others.\n\n
-        3.3. You may not engage in any form of harassment or abuse when using the app.\n\n
-        4. <b>Content Ownership</b>\n\n
-        4.1. The content you submit remains your intellectual property. However, by using the app, you grant "Fusion Chat" a worldwide, non-exclusive, royalty-free license to use, display, and reproduce your content for the purpose of operating the app.\n\n
-        5. <b>Privacy and Data Collection</b>\n\n
-        5.1. "Fusion Chat" may collect and store user data as described in our Privacy Policy.\n\n
-        6. <b>Termination</b>\n\n
-        6.1. "Fusion Chat" reserves the right to terminate your account for any reason, without notice.\n\n
-        6.2. You may terminate your account at any time.\n\n
-        7. <b>Limitation of Liability</b>\n\n
-        7.1. "Fusion Chat" is provided "as is" without warranties of any kind, either express or implied.\n\n
-        7.2. "Fusion Chat" shall not be liable for any direct, indirect, incidental, special, or consequential damages.\n\n
-        8. <b>Changes to Terms and Conditions</b>\n\n
-        8.1. "Fusion Chat" may modify these terms at any time. Notice of changes will be posted on the app.\n\n
-        9. <b>Governing Law</b>\n\n
-        9.1. These Terms and Conditions are governed by the laws of [Your Jurisdiction].\n\n
-        10. <b>Contact Information</b>\n\n
-        If you have any questions or concerns regarding these Terms and Conditions, please contact us at [Your Contact Information].\n\n
-    ]]>
+   hello
 </string>
+
+
 
 </resources>

@@ -2,20 +2,16 @@ package com.fusion.fusionchat.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-
 import com.fusion.fusionchat.Adapters.ChatBotAdapter;
 import com.fusion.fusionchat.Models.MsgModel;
 import com.fusion.fusionchat.Services.RetrofitAPI;
 import com.fusion.fusionchat.databinding.ActivityChatBotBinding;
-
 import java.util.ArrayList;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -64,6 +60,7 @@ public class ChatBotActivity extends AppCompatActivity {
     public void reply(String question) {
 
         list.add("Typing...");
+
         String url = "http://api.brainshop.ai/get?bid=173152&key=kqt9LPzuyF0Su40q&uid=[uid]&msg=" + question;
         String Baseurl = "http://api.brainshop.ai/";
         Retrofit retrofit = new Retrofit.Builder()

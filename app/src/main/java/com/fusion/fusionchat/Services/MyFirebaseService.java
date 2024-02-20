@@ -8,15 +8,12 @@ import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
-
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
-
 import com.fusion.fusionchat.Activities.MainActivity;
 import com.fusion.fusionchat.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
 import org.jetbrains.annotations.NotNull;
 
 public class MyFirebaseService extends FirebaseMessagingService {

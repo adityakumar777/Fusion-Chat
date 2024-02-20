@@ -10,7 +10,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -23,7 +22,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -58,8 +56,7 @@ public class ChatScreenActivity extends AppCompatActivity {
     private ActivityChatScreenBinding binding;
     private FirebaseAuth firebaseAuth;
     private FirebaseStorage storage;
-        String senderUid;
-
+    String senderUid;
     String profilePicResId;
     String token;
     String username;
@@ -147,7 +144,6 @@ public class ChatScreenActivity extends AppCompatActivity {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
 
@@ -185,6 +181,7 @@ public class ChatScreenActivity extends AppCompatActivity {
 
                 StorageReference reference = storage.getReference().child("chats")
                         .child(System.currentTimeMillis() + "");
+                binding.progress.setVisibility(View.VISIBLE);
                 reference.putFile(result).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
@@ -219,7 +216,7 @@ public class ChatScreenActivity extends AppCompatActivity {
                                                             });
                                                 }
                                             });
-
+                                    binding.progress.setVisibility(View.GONE);
                                     //Toast.makeText(ChatActivity.this, filePath, Toast.LENGTH_SHORT).show();
                                 }
                             });
@@ -229,7 +226,8 @@ public class ChatScreenActivity extends AppCompatActivity {
             }
         });
 
-        database.getReference().child("chats")
+        database.getReference()
+                .child("chats")
                 .child(senderRoom)
                 .addValueEventListener(new ValueEventListener() {
                     @Override
@@ -320,6 +318,7 @@ public class ChatScreenActivity extends AppCompatActivity {
             }) {
                 @Override
                 public Map<String, String> getHeaders() throws AuthFailureError {
+
                     HashMap<String, String> map = new HashMap<>();
                     String key = "key=AAAAodiCZ7Q:APA91bHKf8Wcdpkz9u7zPvHCMlb2Y4MbQb_zBYt3xzIR3m1eKNl7ADwMh49rJ-RVsIliCbFry75WwwXhaVTO57YL3QaxVLYVuDBRHMN05iECiYbXOSEZj451JWd44ZMdBkWNN9jE5yms";
                     map.put("Content-Type", "application/json");
@@ -335,10 +334,7 @@ public class ChatScreenActivity extends AppCompatActivity {
         } catch (Exception ex) {
 
         }
-
-
     }
-
 
     public void showProfilePictureDialog(String profilePicResId ,String username) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

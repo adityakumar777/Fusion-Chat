@@ -38,26 +38,30 @@
             binding = ActivityLoginBinding.inflate(getLayoutInflater());
             setContentView(binding.getRoot());
 
-            requestPermissions(permissions, PERMISSION_REQUEST_CODE);
 
-            binding.cpicker.registerCarrierNumberEditText(binding.number);
+
+          binding.cpicker.registerCarrierNumberEditText(binding.number);
 
            numberTextWatcher();
 
             binding.goBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    requestPermissions(permissions, PERMISSION_REQUEST_CODE);
                     if (binding.number.getText().toString().trim().isEmpty()) {
                         binding.number.setError("Enter Number");
                         YoYo.with(Techniques.Shake) //Shaking Animation
                                 .duration(700)
                                 .playOn(binding.goBtn);
-                    } else if (binding.number.getText().toString().trim().length() != 10) {
+                    }
+                    else if (binding.number.getText().toString().trim().length() != 10) {
                         binding.number.setError("Wrong Number");
                          YoYo.with(Techniques.Shake)
                                 .duration(700)
                                 .playOn(binding.goBtn);
-                    } else {
+                    }
+                    else {
                         sendOTP();
                     }
                 }
@@ -121,7 +125,6 @@
                     overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 }
             };
-
 
 
             PhoneAuthOptions options =

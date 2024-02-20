@@ -7,17 +7,22 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-           <ImageView
-            android:id="@+id/image"
-            android:layout_width="200dp"
-            android:layout_height="130dp"
-            android:layout_margin="5dp"
-            android:scaleType="centerCrop"
-            android:visibility="gone"
-            app:srcCompat="@drawable/icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignEnd="@+id/senderChat"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon" />
 
     <TextView
         android:id="@+id/senderChat"
@@ -54,6 +59,20 @@
         android:layout_marginTop="-2dp"
         android:text="12:00pm"
         android:textColor="#959595"
+        android:textIsSelectable="false"
+        android:textSize="10dp" />
+<TextView
+        android:id="@+id/senderTimeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="-2dp"
+        android:text="12:00pm"
+        android:textColor="#959595"
+    android:visibility="gone"
         android:textIsSelectable="false"
         android:textSize="10dp" />
 

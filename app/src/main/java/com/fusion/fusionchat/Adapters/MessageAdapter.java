@@ -178,7 +178,10 @@ public class MessageAdapter extends RecyclerView.Adapter {
 
 
             if(message.getMessage().equals("photo")) {
+                viewHolder.binding.senderTimeImg.setText(formatTime(message.getTime()));
                 viewHolder.binding.image.setVisibility(View.VISIBLE);
+                viewHolder.binding.senderTimeImg.setVisibility(View.VISIBLE);
+                viewHolder.binding.senderTime.setVisibility(View.GONE);
                 viewHolder.binding.senderChat.setVisibility(View.GONE);
                 //viewHolder.binding.cons.setBackgroundResource(R.drawable.corners);
                 Picasso.get().load(message.getPhoto()).placeholder(R.drawable.placeholder_img).into(viewHolder.binding.image);

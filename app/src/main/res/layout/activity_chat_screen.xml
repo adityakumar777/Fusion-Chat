@@ -7,12 +7,24 @@
     android:background="@color/bg"
     tools:context=".Activities.ChatScreenActivity">
 
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#EAEEF5"
         android:layout_margin="5dp"
+        android:background="#EAEEF5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -64,8 +76,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Online"
-                android:textSize="12dp"
                 android:textColor="@color/light_black"
+                android:textSize="12dp"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/profilePic"
                 app:layout_constraintTop_toBottomOf="@+id/usernameOnChatScreen" />
@@ -79,9 +91,9 @@
         android:id="@+id/en_message"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
+        android:layout_margin="5dp"
         android:gravity="center"
         android:paddingHorizontal="10dp"
-        android:layout_margin="5dp"
         android:text="Your messages are end to end encrypted by our team!"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +120,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-       android:background="@drawable/corners"
+        android:background="@drawable/corners"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/send"
         app:layout_constraintStart_toStartOf="parent">
