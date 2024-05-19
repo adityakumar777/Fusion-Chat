@@ -22,10 +22,6 @@ public class SplashActivity extends AppCompatActivity {
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        YoYo.with(Techniques.BounceInLeft)
-                .duration(700)
-                .playOn(binding.splashLogo);
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
