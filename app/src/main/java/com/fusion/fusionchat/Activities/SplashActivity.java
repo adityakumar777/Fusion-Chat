@@ -34,10 +34,8 @@ public class SplashActivity extends AppCompatActivity {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if (currentUser != null) {
-            // User is already authenticated, navigate to chat activity
             startActivity(new Intent(this, MainActivity.class));
         } else {
-            // User not authenticated, show signup activity
             startActivity(new Intent(this, WalkthroughActivity.class));
         }
         finish();
